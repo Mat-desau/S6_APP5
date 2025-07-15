@@ -1,0 +1,25 @@
+clc
+clear all
+close all
+format long
+
+
+load("sons.mat");
+
+out = sim("mfbase.slx");
+
+
+Bruit = 0;
+Accen = 0;
+
+Ps = var(out.RSBi);
+
+Bruit = 1;
+Accen = 0;
+
+PSb = var(out.RSBi);
+
+Bruit = 1;
+Accen = 1;
+
+PSbA = var(out.RSBi);
